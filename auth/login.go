@@ -12,7 +12,7 @@ import (
 )
 
 func Login(c *gin.Context) {
-	var db *gorm.DB = connection.DBInit()
+	var db *gorm.DB = connection.DBConnect()
 	client := model.User{
 		Username: c.PostForm("username"),
 		Password: c.PostForm("password")}

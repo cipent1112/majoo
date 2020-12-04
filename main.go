@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	session := connection.DBInit()
+	session := connection.DBConnect()
 	db := &handler.DB{DB: session}
 	router.Route(db)
 }
