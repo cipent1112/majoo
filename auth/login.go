@@ -5,14 +5,14 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/cipent1112/majoo/config"
+	"github.com/cipent1112/majoo/connection"
 	"github.com/cipent1112/majoo/model"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 )
 
 func Login(c *gin.Context) {
-	var db *gorm.DB = config.DBInit()
+	var db *gorm.DB = connection.DBInit()
 	client := model.User{
 		Username: c.PostForm("username"),
 		Password: c.PostForm("password")}

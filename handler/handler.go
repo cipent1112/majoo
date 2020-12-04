@@ -28,7 +28,6 @@ func (db *DB) GetUser(c *gin.Context) {
 	c.JSON(http.StatusOK, result)
 }
 
-//bit different output
 func (db *DB) GetUsers(c *gin.Context) {
 	clients := []model.User{}
 	total := 0
